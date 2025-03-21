@@ -1,0 +1,7 @@
+.segment {
+    border: solid 2px black;
+    margin: 100px;
+    padding: 50px;
+    text-align: center;
+    font-size: 20px;
+}
