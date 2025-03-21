@@ -1,10 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './static/App.css';
+import { useState, useEffect, useLayoutEffect } from 'react'
+import { Route, Routes, Link, useNavigate } from 'react-router-dom'
+import LoadingScreen from './LoadingScreen';
+import Home from './Home'
 
 function App() {
+
+  const nav = useNavigate()
+
+  //Changes title of page, loads before the page is painted so there is no delay unlike using useEffect which
+  //causes signifigant delays
+  useLayoutEffect(() => {
+    document.title = 'harpys cool website';
+   }, []);
+
+   useEffect(() => {
+    nav('/loading')
+   }, [])
+
+
   return (
     <div className="App">
-      <h1>This website is under construction (currently being reconstructed in ReactJS), please sit tight!</h1>
+      <Routes>
+          <Route path = '/loading' element = {<LoadingScreen />}/>
+          <Route path = '/home' element = {<Home/>}/>
+      </Routes>
     </div>
   );
 }
