@@ -1,22 +1,30 @@
 import './static/Home.css'
+import './static/Music.css'
 import React, { useState, useEffect } from 'react';
 import useSound from 'use-sound';
+import PublicMusic from './PublicMusic'
+import ExclusiveMusic from './ExclusiveMusic'
 
-function Home(){
-  useEffect(() => {
-  });
+function Music(){
+  const[currentSelection, setCurrentSelection] = useState('soundcloud')
 
   return (
-    <div>
-    <div class = "segment" style = {{padding: '200px'}}>
-        <div class = 'segment'>
-            <p>hurt (homesick)</p>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no"
-            allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2059506148%3Fsecret_token%3Ds-Yt8wViLHgqA&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        </div>
-    </div>
+    <div id = "choice_container">
+      <div class="folder-tab">
+        <p style={{ cursor: 'pointer' }} onClick={() => setCurrentSelection('soundcloud')}>
+          soundcloud
+        </p>
+      </div>
+      <div class="folder-tab">
+        <p style={{ cursor: 'pointer' }} onClick={() => setCurrentSelection('exclusives')}>
+          exclusives
+        </p>
+      </div>
+      {
+        currentSelection == 'soundcloud' ? <PublicMusic /> : <ExclusiveMusic /> 
+      }
     </div>
   );
 };
 
-export default Home;
+export default Music;
