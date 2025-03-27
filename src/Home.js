@@ -34,11 +34,6 @@ function Home() {
         <animated.div style={music_opacity}>
           <h3><Link to="/music">music</Link></h3>
         </animated.div>
-
-        <animated.div style={blog_opacity}>
-          <h3>blog</h3>
-        </animated.div>
-
         <animated.div style={links_opacity}>
           <h3><Link to="/links">links</Link></h3>
         </animated.div>

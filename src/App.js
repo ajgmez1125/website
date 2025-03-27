@@ -23,6 +23,10 @@ function App() {
 
 
   return (
+    <>
+    <div style = {{float: 'right'}}>
+        <p>v1</p>
+      </div>
     <div className="App">
       <Routes>
           <Route path = '/loading' element = {<LoadingScreen />}/>
@@ -32,6 +36,7 @@ function App() {
           <Route path = '/music' element = {<Music />} />
       </Routes>
     </div>
+    </>
   );
 }
 

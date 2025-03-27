@@ -2,7 +2,7 @@ import './static/Home.css'
 import React, { useState, useEffect } from 'react';
 import useSound from 'use-sound';
 
-function Home(){
+function PublicMusic(){
   useEffect(() => {
   });
 
@@ -57,4 +57,4 @@ function Home(){
   );
 };
 
-export default Home;
+export default PublicMusic;
