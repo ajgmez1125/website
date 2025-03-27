@@ -20,7 +20,6 @@ function AboutMe(){
             <li>fakes</li>
             <li>lames</li>
             <li>terfs/homophobes/transphobes/etc</li>
-            <li>itchy balls</li>
         </ul>
         
     </div>
